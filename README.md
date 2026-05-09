@@ -1,58 +1,234 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# ToDoList App
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A task management web application built with **Laravel** framework as part of the **Application Development and Emerging Technologies** course.
 
-## About Laravel
+## 📋 Project Overview
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+ToDoList App is a simple yet functional web application that allows users to create, manage, and organize their daily tasks and to-do items. The application provides a clean interface for adding, editing, marking as complete, and deleting tasks.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 🎯 Features
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- ✅ **Create Tasks** - Add new to-do items to your list
+- ✏️ **Edit Tasks** - Update existing task details
+- ✔️ **Mark as Complete** - Check off completed tasks
+- 🗑️ **Delete Tasks** - Remove tasks from your list
+- 📱 **Responsive Design** - Works on desktop, tablet, and mobile devices
+- 💾 **Persistent Storage** - Tasks are saved in a database
 
-## Learning Laravel
+## 🛠️ Technology Stack
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### Backend
+- **Laravel** - PHP web application framework
+- **PHP** - Server-side language
+- **MySQL/SQLite** - Database management
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Frontend
+- **Blade Templates** - Laravel's templating engine
+- **HTML5 & CSS3** - Markup and styling
+- **JavaScript** - Client-side interactivity
+- **Vite** - Frontend build tool
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+### Development Tools
+- **Composer** - PHP dependency manager
+- **npm/Yarn** - JavaScript package manager
+- **PHPUnit** - Testing framework
 
-## Agentic Development
+## 📁 Project Structure
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
-
-```bash
-composer require laravel/boost --dev
-
-php artisan boost:install
+```
+ToDoList-App/
+├── app/                    # Application code (Models, Controllers, etc.)
+├── bootstrap/              # Bootstrap application files
+├── config/                 # Configuration files
+├── database/               # Database migrations and seeders
+├── public/                 # Publicly accessible files (images, CSS, JS)
+├── resources/              # Views, language files, and assets
+├── routes/                 # API and web route definitions
+├── storage/                # Logs, cache, and uploads
+├── tests/                  # Unit and feature tests
+├── composer.json           # PHP dependencies
+├── package.json            # JavaScript dependencies
+├── vite.config.js          # Vite configuration
+└── .env.example            # Environment variables template
 ```
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+## 🚀 Getting Started
 
-## Contributing
+### Prerequisites
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Before you begin, ensure you have the following installed on your system:
+- **PHP** (8.0 or higher)
+- **Composer**
+- **Node.js** (14 or higher)
+- **npm** or **Yarn**
+- **MySQL** or **SQLite**
 
-## Code of Conduct
+### Installation
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/JLNerecina/ToDoList-App.git
+   cd ToDoList-App
+   ```
 
-## Security Vulnerabilities
+2. **Install PHP dependencies:**
+   ```bash
+   composer install
+   ```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+3. **Install JavaScript dependencies:**
+   ```bash
+   npm install
+   # or if using Yarn
+   yarn install
+   ```
 
-## License
+4. **Create environment file:**
+   ```bash
+   cp .env.example .env
+   ```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+5. **Generate application key:**
+   ```bash
+   php artisan key:generate
+   ```
+
+6. **Configure your database:**
+   - Open `.env` file
+   - Update `DB_CONNECTION`, `DB_HOST`, `DB_PORT`, `DB_DATABASE`, `DB_USERNAME`, and `DB_PASSWORD` according to your database setup
+
+7. **Run database migrations:**
+   ```bash
+   php artisan migrate
+   ```
+
+8. **Build frontend assets:**
+   ```bash
+   npm run build
+   # or for development with hot reload
+   npm run dev
+   ```
+
+9. **Start the development server:**
+   ```bash
+   php artisan serve
+   ```
+
+   The application will be available at `http://localhost:8000`
+
+## 📝 Usage
+
+### Running the Application
+
+1. **Development Mode (with hot reload):**
+   ```bash
+   # Terminal 1: Start Laravel server
+   php artisan serve
+   
+   # Terminal 2: Start Vite development server
+   npm run dev
+   ```
+
+2. **Production Build:**
+   ```bash
+   npm run build
+   php artisan serve
+   ```
+
+### Managing Tasks
+
+1. **View Tasks** - Open the application and see your task list
+2. **Add a Task** - Click "Add Task" and enter your task details
+3. **Mark Complete** - Click the checkbox next to a task to mark it as done
+4. **Edit a Task** - Click the edit button to modify task details
+5. **Delete a Task** - Click the delete button to remove a task from your list
+
+## 🧪 Testing
+
+Run the test suite using PHPUnit:
+
+```bash
+php artisan test
+```
+
+For more detailed test output:
+```bash
+php artisan test --verbose
+```
+
+## 📚 Available Commands
+
+```bash
+# Migrate the database
+php artisan migrate
+
+# Rollback migrations
+php artisan migrate:rollback
+
+# Refresh the database
+php artisan migrate:refresh
+
+# Seed the database
+php artisan db:seed
+
+# Clear application cache
+php artisan cache:clear
+
+# Clear configuration cache
+php artisan config:clear
+
+# View all available routes
+php artisan route:list
+```
+
+## 📖 Learning Resources
+
+- [Laravel Documentation](https://laravel.com/docs)
+- [Laravel Best Practices](https://laravel.com/docs/contributions)
+- [Laracasts - Video Tutorials](https://laracasts.com)
+- [Laravel Learn](https://laravel.com/learn)
+
+## 🤝 Contributing
+
+Contributions are welcome! To contribute:
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the **MIT License**. See the `LICENSE` file for details.
+
+## 👤 Author
+
+**JLNerecina**
+- GitHub: [@JLNerecina](https://github.com/JLNerecina)
+
+## 📧 Support
+
+For questions or issues, please:
+- Open an [issue on GitHub](https://github.com/JLNerecina/ToDoList-App/issues)
+- Contact the project maintainer
+
+## 🎓 Course Information
+
+This project is developed as an educational activity for:
+- **Course:** Application Development and Emerging Technologies
+- **Topic:** Web Application Development with Modern Frameworks
+
+## 🔗 Useful Links
+
+- [GitHub Repository](https://github.com/JLNerecina/ToDoList-App)
+- [Laravel Framework](https://laravel.com)
+- [Vite Build Tool](https://vitejs.dev)
+
+---
+
+**Last Updated:** 2026
+
+**Version:** 1.0.0
+
+Happy task managing! 📝✨
